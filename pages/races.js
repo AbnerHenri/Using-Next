@@ -2,9 +2,9 @@
 
 function Races() {
   return(
-      <div>
-          
-      </div>
+    <>
+      <h1>Raças</h1>
+    </>
   );
 }
 
