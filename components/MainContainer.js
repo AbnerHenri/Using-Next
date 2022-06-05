@@ -7,7 +7,7 @@ function MainContainer({ children }) {
   return(
     <>
         <NavBar />
-        <div style={{ height : '60vh' }}>{children}</div>
+        <div style={{ minHeight : '50vh' }}>{children}</div>
         <Footer />
     </>
   );

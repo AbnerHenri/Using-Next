@@ -1,11 +1,20 @@
 import styles from '../styles/Home.module.css'
 
+import Head from 'next/head'
+import Image from 'next/image'
+
 export default function Home() {
   return (
     <div>
-        <h1>Página Principal</h1>
+      <Head>
+        <title>Página Principal</title>
+        <meta name='keywords' content='Roupas, Calçados' />
+        <meta name='description' content='Encontre as melhores roupas pra você' />
+      </Head>
 
-        <p>
+        <h1 style={{ marginLeft : 10 }}>Página Principal</h1>
+
+        <p style={{ marginLeft : 20, maxWidth : '80%', lineHeight : 2 }}>
         What is Lorem Ipsum?
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
@@ -18,6 +27,14 @@ export default function Home() {
 
         The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
         </p>
+
+        <Image 
+          src={'/Images/SupinoReto.jpg'}
+          width='350px'
+          height='200px'
+          alt='Supino Reto'
+        />
+
     </div>
   )
 }
