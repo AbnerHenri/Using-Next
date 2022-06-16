@@ -15,25 +15,30 @@ export async function getStaticProps() {
 
 export default function Home({ results }) {
 
-  //   function checkStatus(status){
-  //     switch (status) {
-  //     case 'Alive':
-  //       return  { color : 'green' }
+    function checkStatus(status){
+      switch (status) {
+      case 'Alive':
+        return  { color : 'green' }
       
       
-  //     case 'unknown' :
-  //       return  { color : 'gray' }
+      case 'unknown' :
+        return  { color : 'gray' }
 
 
-  //     case 'Dead' : 
-  //       return  { color : 'red' }
+      case 'Dead' : 
+        return  { color : 'red' }
     
-  //     default:
-  //       break;
-  //   }
-  // }
+      default:
+        break;
+    }
+  }
 
-  console.log(results)
+  function Redirect(name) {
+
+    const str = `http://localhost:3000/${name}`
+
+    return str
+  }
 
   return (
     <div>
@@ -43,10 +48,10 @@ export default function Home({ results }) {
         <meta name='description' content='Encontre as melhores roupas pra você' />
       </Head>
 
-      {/* <div style={{ marginLeft : 15 }}>
+      <div style={{ marginLeft : 15 }}>
         <h1>Página Teste</h1>
-        {results.map((e)=> <h4>{e.name} - <span style={checkStatus(e.status)}>{e.status}</span></h4>)}
-      </div> */}
+        {results.map((e)=> <a href={Redirect(e.name)} style={{ display : 'block' }}>{e.name} - <span style={checkStatus(e.status)}>{e.status}</span></a>)}
+      </div>
 
     </div>
   )
