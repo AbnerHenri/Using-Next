@@ -28,10 +28,14 @@
 }
 
 .Front {
-    display: none;
     border: 1px solid gray;
     width: 100%;
     height: 80%;
+}
+
+.Front:hover {
+    transition-duration: 500ms;
+    opacity: 0.1;
 }
 
 .Front > img {
@@ -41,13 +45,18 @@
 
 .Back {
     text-align: center;
-    /* display: none; */
 
     width: 100%;
     height : 100%;
 
     background-color: rgb(36, 36, 36) ;
-    color : white
+    color : white;
 }
+
+.Back > p {
+    margin-top : 25px;
+}
+
+
 
 

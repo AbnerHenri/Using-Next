@@ -25,15 +25,16 @@ function Card(props) {
   return(
       <div className={Styles.Card}>
 
-        <div className={Styles.Front}>
-          <img src={props.image}/>
-          <p className={Styles.Name}>{props.name}</p>
-        </div>
-          
-
           <div className={Styles.Back}>
-              <p style={checkStatus(props.status)}>{props.status}</p>
-              <p>{props.species}</p>
+              <p style={checkStatus(props.status)}><strong style={{ color : 'white' }}>Status : </strong>{props.status}</p>
+              <p><strong>Specie :</strong> {props.species}</p>
+              <p><strong>Gender :</strong> {props.gender}</p>
+              <p><strong>Origin :</strong> {props.origin}</p>
+          </div>
+
+          <div className={Styles.Front}>
+            <img src={props.image}/>
+            <p className={Styles.Name}>{props.name}</p>
           </div>
       </div>
   );

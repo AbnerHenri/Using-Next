@@ -34,7 +34,13 @@ export default function Home({ results }) {
 
       <div className={styles.Home}>
         
-        {results.map((e)=> <Card image={e.image} name={e.name} status={e.status} species={e.species}/>)}
+        {results.map((e)=> <Card 
+          image={e.image} 
+          name={e.name} 
+          status={e.status} 
+          species={e.species}
+          gender={e.gender}
+          origin={e.location.name}/>)}
       </div>
 
     </div>
