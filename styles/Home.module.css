@@ -1,6 +1,35 @@
 .Home {
-    background-color: var(--color-two);
+    margin-top : 50px;
+    margin-bottom: 50px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    justify-content: center;
+    grid-gap : 75px;
+    grid-template-columns: 18vw 18vw 18vw 18vw ;
+}
+
+@media screen and (max-width : 960px) {
+    .Home {
+        display: grid;
+        grid-template-columns: 30vw 30vw;
+        margin : auto;
+        justify-content: center;
+
+        margin-top : 30px;
+        margin-bottom : 30px;
+    }
+
+}
+
+@media screen and (max-width : 650px) {
+    .Home {
+        display: grid;
+        grid-template-columns: 50vw;
+        margin : auto;
+        justify-content: center;
+
+        margin-top : 30px;
+        margin-bottom : 30px;
+    }
+
 }
