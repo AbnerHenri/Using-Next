@@ -1,23 +1,53 @@
 .Card {
+    position: relative;
     margin : auto;
-    margin-top : 25px;
-    /* padding: 10px; */
+    margin-top : 30px;
+    margin-bottom : 30px;
 
-    width : 18vw;
-    
+    width: 18vw;
+    height : 45vh;
 
     display : flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 
-    border : 1px solid gray;
+    /* border : 1px solid gray; */
     box-shadow: 2px 0px 10px 0px;
 }
 
-
-.TextImage {
+.Name {
+    color: white;
     text-align: center;
+}
+
+.Front, .Back {
+    position: absolute;
+
+    width: 100%;
+    height : 100%;
+}
+
+.Front {
+    display: none;
+    border: 1px solid gray;
+    width: 100%;
+    height: 80%;
+}
+
+.Front > img {
+    width: 100%;
+    height: 100%;
+}
+
+.Back {
+    text-align: center;
+    /* display: none; */
+
+    width: 100%;
+    height : 100%;
 
     background-color: rgb(36, 36, 36) ;
     color : white
 }
+
+

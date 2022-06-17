@@ -24,10 +24,14 @@ function Card(props) {
 
   return(
       <div className={Styles.Card}>
-          <img src={props.image} />
 
-          <div className={Styles.TextImage}>
-              <p>{props.name}</p>
+        <div className={Styles.Front}>
+          <img src={props.image}/>
+          <p className={Styles.Name}>{props.name}</p>
+        </div>
+          
+
+          <div className={Styles.Back}>
               <p style={checkStatus(props.status)}>{props.status}</p>
               <p>{props.species}</p>
           </div>
