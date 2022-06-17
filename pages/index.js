@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css'
 
 import Head from 'next/head'
+import Card from '../components/Card'
 
 export async function getStaticProps() {
 
@@ -15,23 +16,6 @@ export async function getStaticProps() {
 
 export default function Home({ results }) {
 
-    function checkStatus(status){
-      switch (status) {
-      case 'Alive':
-        return  { color : 'green' }
-      
-      
-      case 'unknown' :
-        return  { color : 'gray' }
-
-
-      case 'Dead' : 
-        return  { color : 'red' }
-    
-      default:
-        break;
-    }
-  }
 
   function Redirect(name) {
 
@@ -48,9 +32,9 @@ export default function Home({ results }) {
         <meta name='description' content='Encontre as melhores roupas pra você' />
       </Head>
 
-      <div style={{ marginLeft : 15 }}>
-        <h1>Página Teste</h1>
-        {results.map((e)=> <a href={Redirect(e.name)} style={{ display : 'block' }}>{e.name} - <span style={checkStatus(e.status)}>{e.status}</span></a>)}
+      <div className={styles.Home}>
+        
+        {results.map((e)=> <Card image={e.image} name={e.name} status={e.status} species={e.species}/>)}
       </div>
 
     </div>
