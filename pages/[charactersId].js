@@ -3,18 +3,6 @@ import Link from 'next/link'
 
 import { useRouter } from 'next/router'
 
-export async function getStaticProps(context) {
-
-  const { params } = context
-
-  const data = await fetch(`https://rickandmortyapi.com/api/character/${params.charactersId}`)
-  const character = await data.json()
-
-  return {
-    props : { character }
-  }
-
-}
 
 export async function getStaticPaths() {
 
@@ -32,6 +20,19 @@ export async function getStaticPaths() {
   })
 
   return { paths, fallback : false }
+}
+
+export async function getStaticProps(context) {
+
+  const { params } = context
+
+  const data = await fetch(`https://rickandmortyapi.com/api/character/${params.charactersId}`)
+  const character = await data.json()
+
+  return {
+    props : { character }
+  }
+
 }
 
 function Character({ character }) {
