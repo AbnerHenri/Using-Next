@@ -36,6 +36,7 @@
 
 .Front:hover {
     transition-duration: 500ms;
+    cursor : pointer;
     opacity: 0.1;
 }
 
@@ -54,11 +55,18 @@
     color : white;
 }
 
+.Back > p {
+    margin-top : 35%;
+    font-size : 2em;
+}
+
 
 
 @media screen and (max-width : 960px) {
     .Card {
        width: 100%;
+       height : 45vmin;
+       text-align: center;
     }
 
 }

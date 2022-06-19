@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Styles from '../styles/Components/Card.module.css'
+import Link from 'next/link';
 
 function Card(props) {
 
@@ -22,20 +23,27 @@ function Card(props) {
   }
 }
 
+  function Redirect(route) {
+    const url = `http://localhost:3000/${route}`
+
+    return url
+  }
+
   return(
       <div className={Styles.Card}>
 
           <div className={Styles.Back}>
-              <p style={checkStatus(props.status)}><strong style={{ color : 'white' }}>Status : </strong>{props.status}</p>
-              <p><strong>Specie :</strong> {props.species}</p>
-              <p><strong>Gender :</strong> {props.gender}</p>
-              <p><strong>Origin :</strong> {props.origin}</p>
+              {/* <p style={checkStatus(props.status)}><strong style={{ color : 'white' }}>Status : </strong>{props.status}</p> */}
+              <p>Details...</p>
           </div>
 
-          <div className={Styles.Front}>
-            <img src={props.image}/>
-            <p className={Styles.Name}>{props.name}</p>
-          </div>
+        <Link href={Redirect(props.name)}>
+            <div className={Styles.Front}>
+              <img src={props.image}/>
+              <p className={Styles.Name}>{props.name}</p>
+            </div>
+        </Link>
+          
       </div>
   );
 }
