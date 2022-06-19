@@ -41,8 +41,8 @@ function Character({ character }) {
 
   return(
     <div>
-        <Link href='/'><strong style={{ color : 'white', cursor : 'pointer' }}>Voltar</strong></Link>
-        <h1 style={{ color : 'white' }}>Exibindo o página número : {charactersId}</h1>
+        <Link href='/'><strong style={{ cursor : 'pointer' }}>Voltar</strong></Link>
+        
     </div>
   );
 }

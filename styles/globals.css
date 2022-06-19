@@ -1,7 +1,7 @@
 html,
 body {
   --color-one : #000000;
-  --color-two : #171717;
+  --color-two : #f8f8ff;
   --color-three : #5c5c5c;
 
   background-color: var(--color-two);
